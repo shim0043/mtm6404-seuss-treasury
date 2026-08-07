@@ -2,11 +2,12 @@ import { Link, NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <header>
-      <div>
-        <Link to="/">Seuss Treasury</Link>
-        
-        <nav>
+    <header className="border-bottom">
+      <div className="container d-flex align-items-center gap-4">
+        <Link to="/" className="text-dark text-decoration-none fw-bold fs-5">
+          Seuss Treasury
+        </Link>
+        <nav className="d-flex gap-3">
           <NavLink 
             to="/" 
             className={({ isActive }) => 
