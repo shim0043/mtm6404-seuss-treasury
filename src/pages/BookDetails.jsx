@@ -17,6 +17,23 @@ function BookDetails() {
     if (path.startsWith('http')) return path;
     return `https://lustrous-profiterole-958625.netlify.app${path}`;
   };
+
+  return (
+    <div className="container">
+      <div>
+        <div>
+          <img
+            src={getImageUrl(book?.coverImage)}
+            alt={book?.title || ''}/>
+        </div>
+
+        <div>
+          <h2>{book?.title}</h2>
+          <p>{book?.summary}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default BookDetails;
