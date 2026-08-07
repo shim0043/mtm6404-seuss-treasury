@@ -10,6 +10,12 @@ function App() {
       <Navbar />
         
       <h1 className="display-3 text-center py-5">Seuss Treasury</h1>
+
+      <Routes>
+        <Route path="/" element={<Books />} />
+        <Route path="/books/:id" element={<BookDetails />} />
+        <Route path="/quotes" element={<Quotes />} />
+      </Routes>
     </BrowserRouter>
   );
 }
