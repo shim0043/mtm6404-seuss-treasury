@@ -11,6 +11,12 @@ function BookDetails() {
       .then((data) => setBook(data))
       .catch((err) => console.error('Error fetching book details:', err));
   }, [id]);
+
+  const getImageUrl = (path) => {
+    if (!path) return '';
+    if (path.startsWith('http')) return path;
+    return `https://lustrous-profiterole-958625.netlify.app${path}`;
+  };
 }
 
 export default BookDetails;
