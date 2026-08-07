@@ -4,4 +4,14 @@ import Books from './pages/Books';
 import BookDetails from './pages/BookDetails';
 import Quotes from './pages/Quotes';
 
+function App() {
+  return (
+    <BrowserRouter>
+      <Navbar />
+        
+      <h1 className="display-3 text-center py-5">Seuss Treasury</h1>
+    </BrowserRouter>
+  );
+}
+
 export default App;
