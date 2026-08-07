@@ -20,16 +20,19 @@ function BookDetails() {
 
   return (
     <div className="container">
-      <div>
-        <div>
+      <div className="row">
+        <div className="col-md-5">
           <img
             src={getImageUrl(book?.coverImage)}
-            alt={book?.title || ''}/>
+            alt={book?.title || ''}
+            className="img-fluid w-100"/>
         </div>
 
-        <div>
-          <h2>{book?.title}</h2>
-          <p>{book?.summary}</p>
+        <div className="col-md-7">
+          <h2 className="fs-1">{book?.title}</h2>
+          <p className="text-secondary">
+            {book?.summary}
+          </p>
         </div>
       </div>
     </div>
