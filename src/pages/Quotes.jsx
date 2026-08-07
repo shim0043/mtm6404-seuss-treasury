@@ -23,7 +23,7 @@ function Quotes() {
 
   return (
     <div className="container">
-      <div>
+      <div className="row row-cols-md-2 g-4">
         {quotes.map((quoteItem, index) => {
           const quoteText = quoteItem.quote || quoteItem.text || '';
           
@@ -34,9 +34,11 @@ function Quotes() {
 
           return (
             <div key={quoteItem.id || index}>
-              <div>
+              <div className="p-4 border rounded h-100 d-flex flex-column justify-content-between">
                 <p>{quoteText}</p>
-                <p>— Dr. Seuss {bookTitle && <span>in <i>{bookTitle}</i></span>}</p>
+                <p className="text-secondary mb-0">
+                  — Dr. Seuss {bookTitle && <span>in <i>{bookTitle}</i></span>}
+                </p>
               </div>
             </div>
           );
