@@ -29,6 +29,23 @@ function Books() {
     if (path.startsWith('http')) return path;
     return `https://lustrous-profiterole-958625.netlify.app${path}`;
   };
+
+  return (
+    <div className="container">
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        {books.map((book) => (
+          <div key={book.id}>
+            <Link to={`/books/${book.id}`}>
+              <img
+                src={getImageUrl(book.coverImage)}
+                alt={book.title}
+                className="img-fluid"/>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Books;
