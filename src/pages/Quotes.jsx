@@ -20,6 +20,30 @@ function Quotes() {
         setLoading(false);
       });
   }, []);
+
+  return (
+    <div className="container">
+      <div>
+        {quotes.map((quoteItem, index) => {
+          const quoteText = quoteItem.quote || quoteItem.text || '';
+          
+          const bookTitle = 
+            typeof quoteItem.book === 'object' && quoteItem.book !== null
+              ? quoteItem.book.title
+              : quoteItem.book || '';
+
+          return (
+            <div key={quoteItem.id || index}>
+              <div>
+                <p>{quoteText}</p>
+                <p>— Dr. Seuss {bookTitle && <span>in <i>{bookTitle}</i></span>}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default Quotes;
