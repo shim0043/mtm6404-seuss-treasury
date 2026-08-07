@@ -7,6 +7,7 @@ function Navbar() {
         <Link to="/" className="text-dark text-decoration-none fw-bold fs-5">
           Seuss Treasury
         </Link>
+        
         <nav className="d-flex gap-3">
           <NavLink 
             to="/" 
